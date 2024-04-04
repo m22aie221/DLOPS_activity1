@@ -30,12 +30,33 @@ y_tanh = np.tanh(x)
 # Plot graphs
 plt.figure(figsize=(15, 10))
 
+plt.subplot(2, 2, 1)
 plt.plot(x, y_sigmoid, label='Sigmoid', color='blue')
 plt.title('Sigmoid')
 plt.xlabel('x')
 plt.ylabel('f(x)')
 plt.legend()
 
+plt.subplot(2, 2, 2)
+plt.plot(x, y_relu, label='ReLU', color='red')
+plt.title('ReLU')
+plt.xlabel('x')
+plt.ylabel('f(x)')
+plt.legend()
+
+plt.subplot(2, 2, 3)
+plt.plot(x, y_leaky_relu, label='Leaky ReLU', color='green')
+plt.title('Leaky ReLU')
+plt.xlabel('x')
+plt.ylabel('f(x)')
+plt.legend()
+
+plt.subplot(2, 2, 4)
+plt.plot(x, y_tanh, label='Tanh', color='purple')
+plt.title('Tanh')
+plt.xlabel('x')
+plt.ylabel('f(x)')
+plt.legend()
 
 plt.tight_layout()
 plt.show()
